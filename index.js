@@ -1,25 +1,10 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const express = require('express');
+const app = express();
+const port = 3000;
 
-const genAI = new GoogleGenerativeAI("AIzaSyCScxkh3Jmm3miODBWLIDDEb0U4wierN88");
+app.use(express.json());
+app.use(express.static('public'));
 
-const model = genAI.getGenerativeModel({ model: "gemini-pro"});
-
-const readline =  require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout
+app.listen(port, () => {
+  console.log(`Server is running on port http://localhost:${port}`);
 });
-
-async function generateContent(prompt) {
-  const result = await model.generateContent(prompt);
-  const response = await result.response;
-  const text = await response.text();
-  console.log(text);
-  run();
-}
-function run(){
-  readline.question('Write a prompt: ', async (prompt) => {
-    await generateContent(prompt);
-  });
-}
-
-run();
