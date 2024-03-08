@@ -20,7 +20,7 @@ To get started with p5-gemini, follow these steps:
     ```
 4. Enter your Gemini API key in the `package.json` file. Replace `YOUR_API_KEY` with your actual API key:
     ```json
-    "start": "GEMINI_API_KEY=YOUR_API_KEY node index.js"
+    "start": "set GENERATIVE_API_KEY=<YOUR_API_KEY> && node index.js"
     ```
 if you don't have a Gemini API key, you can sign up for one [here](https://aistudio.google.com/app/apikey).
 

@@ -5,7 +5,7 @@
     "nodemon": "^3.1.0"
   },
   "scripts": {
-    "start": "export GENERATIVE_API_KEY=<YOUR_API_KEY> && node index.js",
+    "start": "set GENERATIVE_API_KEY=<YOUR_API_KEY> && node index.js"
   },
   "main": "index.js",
   "license": "ISC"
