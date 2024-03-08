@@ -46,4 +46,4 @@ If you would like to contribute to p5-gemini, please follow these steps:
 
 ## Contact
 
-If you have any questions or concerns, please feel free to contact me at `karan.suthar.lakha@gmail.com`.
+If you have any questions or concerns, please feel free to contact me at [karan.suthar.lakha@gmail.com](mailto:karan.suthar.lakha@gmail.com).
