@@ -2,18 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <script defer src="index.js"></script>
     <script src="sketch.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #27207e;
+        }
+        .Container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #93a5ff;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .sketch {
+            aspect-ratio: 1/1;
+            height: 100%;
+            overflow: hidden;
+        }
+        #sketchFrame {
+            border-radius: 15px;
+            border: none;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            width: 100%;
+        }
+        #sendbtn img {
+            height: 100%;
+            aspect-ratio: 1/1;
+        }
+        .chat {
+            display: flex;
+            flex-direction: row;
+            margin-top: 15px;
+            width: 100%;
+            height: 36px;
+            margin-bottom: 10px;
+        }
+        #userInput {
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-right: 10px;
+        }
+        #userInput:focus {
+            outline: none;
+        }
+        #sendbtn {
+            border-radius: 10px;
+            border: none;
+            background-color: #27207e;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            width: 100px;
+            height: 100%;
+        }
+
+        @media screen and (orientation: portrait) {
+            .Container {
+                width: 80vw;
+            }
+        }
+        @media screen and (orientation: landscape) {
+            .Container {
+                height: 90vh;
+            }
+        }
+    </style>
 </head>
 <body>
+<div class="Container">
     <div class="sketch">
-        <iframe id="sketchFrame" src="sketch.html" style="width: 420px; height: 420px; overflow: hidden"></iframe>
+        <iframe id="sketchFrame" src="sketch.html"></iframe>
     </div>
     <div class="chat">
-        <textarea name="response" id="response" cols="30" rows="10"></textarea>
         <input type="text" id="userInput">
         <button id="sendbtn">send</button>
     </div>
+</div>
 </body>
 </html>
