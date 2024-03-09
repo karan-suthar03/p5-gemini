@@ -1,3 +1,5 @@
+// This file is responsible for handling the requests to the generative AI model and returning the response to the client.
+
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const router = require('express').Router();
 const fs = require('fs');
